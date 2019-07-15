@@ -1,0 +1,13 @@
+
+  * {
+    font-family: fantasy;
+    font-style: Italic;
+   }
+   .image{
+    height:50em; 
+    background-size:cover;
+    width:auto;
+    background-image:url('https://cdn.pixabay.com/photo/2017/02/06/00/22/search-2041815__340.jpg');
+    background-position:50% 50%;
+  }
+  

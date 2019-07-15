@@ -1,0 +1,74 @@
+<div class="container-fluid">
+  <div class="jumbotron text-center blue-grey lighten-5">
+    <h2>
+     Search for you Github repository today!
+    </h2>
+  </div> 
+  
+  <div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-9">
+              <input type="text" class="form-control" placeholder="Github username" [(ngModel)]="username" name="username">
+            </div>
+            <div class="col-sm-3">
+              <button class="btn btn-warning" (click)=getRepo() (click)=getUser()>Search<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                <span class="sr-only"></span></button>
+            </div>
+          </div>
+        </div>
+    
+    </div>      
+  <div class="row">
+    <div class="col-md-6">
+      <img src= "{{user.avatar_url}}" class="rounded-circle z-depth-2" data-holder-rendered="true" alt="Picture" >
+        
+   
+    <div class="card-body">
+    
+        <p>
+        <span class="badge badge-pill badge-success">Public Repositories: {{user.public_repos}}</span>
+        <span class="badge badge-pill badge-success">Following: {{user.following}}</span>
+        <span class="badge badge-pill badge-success">Followers: {{user.followers}}</span>
+        
+      </p>
+    </div>
+  </div>
+     
+   <div class ="col-md-6">
+      <p><a href="{{user.html_url}}" target="_blank" class="btn btn-danger">View Profile on Github</a></p>
+     
+      <h5>  
+       <strong> Username: </strong>   <strong>{{user.login}}</strong>
+      </h5>
+         <h5><strong>Bio: </strong> <strong>{{user.bio}}</strong></h5>
+         <h5> <strong>Member Since:</strong>  <strong>{{user.created_at}}</strong></h5>
+   </div>
+
+
+      
+      <div class="card-body" > 
+        <div class="row">
+          <div class="col-md-12">
+              <div class="card-heading">
+                  <h4 class="card-title text-center diff" ><strong>Repositories for</strong> <strong>{{user.login}}</strong></h4>
+                </div>
+          
+        <div class="" *ngFor='let rep of repo'>  
+              
+        <p class="clearfix"><strong>Name: </strong> <strong>{{rep.name}}</strong><a href="{{rep.html_url}}" target="_blank" class="btn btn-success float-left">Checkout on Github!</a></p>
+        
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">{{rep.description}}</li>
+            </ul>
+      </div>
+    </div>
+        </div>
+      </div>
+    
+      </div>
+    </div>
+  
+</div>
+
