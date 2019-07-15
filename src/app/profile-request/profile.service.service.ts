@@ -13,7 +13,7 @@ export class ProfileService {
   // access_token:'?access_token=8b95c9c8bdfb194bb5efa4582e40c05c6fe11377'
   user:User;
   repos:Repository[];
-  username:string='kipkemoimayor'
+  username:string=''
   public newUsername:string;
 
   constructor(private http:HttpClient) {  
