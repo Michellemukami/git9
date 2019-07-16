@@ -8,8 +8,8 @@ import { Observable} from 'rxjs'
  
 @Injectable()
 export class ProfileService {
-  baseurl=environment.apiUrl
-  apikey=environment.access_token
+  baseurl='https://api.github.com'
+  apikey='?access_token=6a4f54327a8893e7ff49b03781377478a915c665'
   
   user:User;
   repos:Repository[];
