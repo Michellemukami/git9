@@ -17,7 +17,7 @@ export class ProfileComponent implements OnInit {
   user:any=[];
   
   repo:any=[];
-  username:string=''
+  username:string='michellemukami'
   
   constructor(private http:HttpClient,private profService:ProfileService) { 
   
