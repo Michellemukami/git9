@@ -10,7 +10,7 @@ import { Observable} from 'rxjs'
 export class ProfileService {
   baseurl=environment.apiUrl
   apikey=environment.access_token
-  // access_token:'?access_token=8b95c9c8bdfb194bb5efa4582e40c05c6fe11377'
+  
   user:User;
   repos:Repository[];
   username:string=''
